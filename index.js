@@ -17,13 +17,13 @@ const formatDate = (timeInSeconds) => {
   else if (hours !== 0 && minutes !== 0 && seconds !== 0) {
     return `${hours}h ${minutes}m ${seconds}s`;
   }
-  else if (timeInSeconds % hours !== 0 && minutes === 0) {
+  else if (timeInSeconds % 3600 !== 0 && minutes === 0) {
     return `${hours}h ${seconds}s`;
   }
-  else if (timeInSeconds % hours !== 0 && seconds === 0) {
+  else if (timeInSeconds % 3600 !== 0 && seconds === 0) {
     return `${hours}h ${minutes}m`;
   }
-  else if (timeInSeconds % hours === 0) {
+  else if (timeInSeconds % 3600 === 0) {
     return `${hours}h`;
   }
 }
