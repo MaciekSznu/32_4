@@ -14,9 +14,6 @@ const formatDate = (timeInSeconds) => {
   else if (timeInSeconds > 59 && timeInSeconds < 3600 && seconds === 0) {
     return `${minutes}m`;
   }
-  else if (hours !== 0 && minutes !== 0 && seconds !== 0) {
-    return `${hours}h ${minutes}m ${seconds}s`;
-  }
   else {
     return `${hours ? hours+'h':''}${minutes ? ' '+minutes+'m':''}${seconds ? ' '+seconds+'s':''}`;
   }
